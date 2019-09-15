@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+		{
+			"item": "minecraft:cod"
+		},
+		{
+			"tag": "forge:minerals/salt"
+		}
+	],
+
+	"result": {
+		"item": "sea:salted_cod",
+		"count": 1
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+		{
+			"item": "sea:haddock"
+		},
+		{
+			"tag": "forge:minerals/salt"
+		}
+	],
+
+	"result": {
+		"item": "sea:salted_haddock",
+		"count": 1
+	}
+}

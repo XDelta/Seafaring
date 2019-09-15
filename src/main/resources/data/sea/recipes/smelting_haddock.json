@@ -1,0 +1,9 @@
+{
+	"type": "minecraft:smelting",
+	"ingredient": {
+		"item": "sea:haddock"
+	},
+	"result": "sea:cooked_haddock",
+	"experience": 0.2,
+	"cookingtime": 200
+}

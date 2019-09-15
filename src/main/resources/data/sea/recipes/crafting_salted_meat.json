@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+		{
+			"item": "minecraft:rotten_flesh"
+		},
+		{
+			"tag": "forge:minerals/salt"
+		}
+	],
+
+	"result": {
+		"item": "sea:salted_meat",
+		"count": 1
+	}
+}

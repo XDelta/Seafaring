@@ -1,0 +1,17 @@
+{
+	"type": "minecraft:crafting_shapeless",
+
+	"ingredients": [
+		{
+			"item": "minecraft:pufferfish"
+		},
+		{
+			"tag": "forge:minerals/salt"
+		}
+	],
+
+	"result": {
+		"item": "sea:salted_pufferfish",
+		"count": 1
+	}
+}
