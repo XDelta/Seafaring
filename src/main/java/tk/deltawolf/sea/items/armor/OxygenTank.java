@@ -25,7 +25,7 @@ import java.util.function.Consumer;
 
 public class OxygenTank extends ArmorItem {
 	private int capacity;
-	public OxygenTank(IArmorMaterial materialIn, EquipmentSlotType slot, int capacity, int low_warn, Item.Properties builder) {
+	public OxygenTank(IArmorMaterial materialIn, EquipmentSlotType slot, int capacity, Item.Properties builder) {
 		super(materialIn, slot, builder);
 		this.capacity = capacity;
 	}
@@ -85,6 +85,18 @@ public class OxygenTank extends ArmorItem {
 		return false;
 	}
 
+	public static int getLowWarn(Item chest) {
+		if(chest == ItemList.basic_tank) {
+			return 5;
+		} else if(chest == ItemList.standard_tank) {
+			return 8;
+		} else if (chest == ItemList.high_capacity_tank) {
+			return 18;
+		} else {
+			return 0;
+		}
+	}
+
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {
@@ -94,7 +106,7 @@ public class OxygenTank extends ArmorItem {
 
 		if(minutes == 0 && seconds <= 1){//&& stack.getDamage() == stack.getMaxDamage() - 20
 			tooltip.add(new StringTextComponent(TextFormatting.RED + "Tank Empty"));
-		} else if (minutes == 0 && seconds <= low_warn) {
+		} else if (minutes == 0 && seconds <= getLowWarn(stack.getItem())) {
 			tooltip.add(new StringTextComponent( TextFormatting.YELLOW + "Oxygen: " + minutes + ":" + (seconds == 0 ? "00" : seconds < 10 ? "0" + seconds : seconds)));
 		} else {
 			tooltip.add(new StringTextComponent("Oxygen: " + minutes + ":" + (seconds == 0 ? "00" : seconds < 10 ? "0" + seconds : seconds)));
