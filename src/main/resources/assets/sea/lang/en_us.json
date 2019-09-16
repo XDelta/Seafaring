@@ -2,15 +2,15 @@
 	"itemGroup.tabSea": "Seafaring",
 
 	"_c": "blocks",
-	"block.sea.salt_pile": "[WIP]Salt Pile",
+	"block.sea.salt_pile": "Salt Pile [Placer]",
 	"block.sea.compressed_sponge": "[WIP]Compressed Sponge",
-	"block.sea.wet_compressed_sponge": "[WIP]Wet Compressed Sponge",
-	"block.sea.sea_stone": "[WIP]Sea Stone",
+	"block.sea.wet_compressed_sponge": "Wet Compressed Sponge",
+	"block.sea.sea_stone": "Sea Stone [Placer]",
 
 	"_c": "items",
 	"item.sea.salt": "Salt",
-	"item.sea.sea_stone": "[WIP]Sea Stone",
-	"item.sea.pebble": "[WIP]Pebble",
+	"item.sea.sea_stone": "Sea Stone",
+	"item.sea.pebble": "Pebble",
 	"item.sea.jerky": "[WIP]Jerky",
 	"item.sea.pearl": "[WIP]Pearl",
 	"item.sea.clam": "[WIP]Clam",
@@ -18,7 +18,7 @@
 	"item.sea.haddock": "Haddock",
 	"item.sea.cooked_haddock": "Cooked Haddock",
 	"item.sea.salted_haddock": "Salted Haddock",
-	"item.sea.salted_meat": "[WIP]Salted Meat",
+	"item.sea.salted_meat": "Salted Meat",
 	"item.sea.salted_pufferfish": "Salted Pufferfish",
 	"item.sea.salted_salmon": "Salted Salmon",
 	"item.sea.calamari": "Raw Calamari",
@@ -32,7 +32,7 @@
 	"item.sea.swamp_feeder_spawn_egg" : "Swamp Feeder Spawn Egg",
 
 	"_c": "entities",
-	"entity.sea.haddock": "[WIP]Haddock",
-	"entity.sea.swamp_feeder": "[WIP]Swamp Feeder"
+	"entity.sea.haddock": "Haddock",
+	"entity.sea.swamp_feeder": "Swamp Feeder"
 
 }
