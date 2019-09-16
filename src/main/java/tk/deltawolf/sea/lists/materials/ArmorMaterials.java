@@ -12,7 +12,7 @@ import tk.deltawolf.sea.Reference;
 import tk.deltawolf.sea.lists.ItemList;
 
 public enum ArmorMaterials implements IArmorMaterial {
-	scuba("scuba", 30, new int[] {4, 6, 5, 3}, 0, Items.IRON_BLOCK, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0f);
+	scuba("scuba", 30, new int[] {1, 1, 0, 0}, 0, Items.IRON_BLOCK, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0f);
 
 	private static final int[] max_damage_array = new int[]{13, 15, 16, 11};
 	private String name;
@@ -22,8 +22,7 @@ public enum ArmorMaterials implements IArmorMaterial {
 	private float toughness;
 	private SoundEvent equipSound;
 
-	private ArmorMaterials(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairItem, SoundEvent equipSound, float toughness)
-	{
+	private ArmorMaterials(String name, int durability, int[] damageReductionAmounts, int enchantability, Item repairItem, SoundEvent equipSound, float toughness) {
 		this.name = name;
 		this.equipSound = equipSound;
 		this.durability = durability;
