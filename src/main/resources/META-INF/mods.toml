@@ -1,18 +1,18 @@
 modLoader="javafml"
 loaderVersion="[28.1,)"
-issueTrackerURL="https://github.com/XDelta/"
+issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/seafaring"
 
 [[mods]]
 modId="sea"
-version="${file.jarVersion}"
+version="0.1.42"
 displayName="Seafaring"
 updateJSONURL="https://mc.deltawolf.tk/assets/endpoints/sea/update.json"
-displayURL="https://mc.deltawolf.tk/"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/seafaring"
 logoFile="logo.png"
 credits="Delta (XDeltaA77)"
 authors="Delta (XDeltaA77)"
 description='''
-This is a placeholder description.
+Go explore the ocean and find life a little different under the waves.
 '''
 #Require Forge
 [[dependencies.sea]]

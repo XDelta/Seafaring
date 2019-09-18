@@ -1,3 +1,5 @@
+import org.apache.tools.ant.filters.ReplaceTokens
+
 buildscript {
     repositories {
         jcenter()
@@ -68,7 +70,7 @@ jar {
     appendix MC_VERSION
 }
 
-def reobfFile = file("$buildDir/reobfJar/${MOD_NAME}-${MOD_VERSION}.jar")
+def reobfFile = file("$buildDir/reobfJar/${MOD_NAME}_${MC_VERSION}-${MOD_VERSION}.jar")//${MOD_NAME}-${MOD_VERSION} not working
 def reobfArtifact = artifacts.add('default', reobfFile) {
     type 'jar'
     builtBy 'reobfJar'

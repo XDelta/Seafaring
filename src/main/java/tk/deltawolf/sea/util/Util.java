@@ -1,8 +1,12 @@
 package tk.deltawolf.sea.util;
 
+import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.Item;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.World;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import tk.deltawolf.sea.Reference;
@@ -25,23 +29,16 @@ public class Util {
 	 * Usage: isEquipped(player, ItemList.ScubaMask, 0);<p>
 	 * slot 0-3 for head-feet
 	 */
-	public static boolean isEquipped(PlayerEntity player, Item armor, int slot) {
-		switch (slot) {
-			case 0:
-				if(player.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() == armor) return true;
-				break;
-			case 1:
-				if(player.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem() == armor) return true;
-				break;
-			case 2:
-				if(player.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem() == armor) return true;
-				break;
-			case 3:
-				if(player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem() == armor) return true;
-				break;
-			default:
-				break;
-		}
+	public static boolean isEquipped(PlayerEntity player, Item armor) {
+		if(player.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() == armor) return true;
+		if(player.getItemStackFromSlot(EquipmentSlotType.CHEST).getItem() == armor) return true;
+		if(player.getItemStackFromSlot(EquipmentSlotType.LEGS).getItem() == armor) return true;
+		if(player.getItemStackFromSlot(EquipmentSlotType.FEET).getItem() == armor) return true;
 		return false;
+	}
+
+	public static boolean isInBubbleColumn(World world, PlayerEntity player) {
+		Block block = world.getBlockState(new BlockPos(player.getPosition())).getBlock();
+		return (block == Blocks.BUBBLE_COLUMN);
 	}
 }

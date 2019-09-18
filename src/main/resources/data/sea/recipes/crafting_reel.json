@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" S ",
+		"SIS",
+		" S "
+	],
+	"key": {
+		"I": {
+			"item": "minecraft:iron_nugget"
+		},
+		"S": {
+			"item": "minecraft:string"
+		}
+	},
+	"result": {
+		"item": "sea:reel"
+	}
+}

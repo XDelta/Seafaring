@@ -14,7 +14,7 @@ import tk.deltawolf.sea.blocks.SeaStone;
 import tk.deltawolf.sea.blocks.WetCompressedSponge;
 import tk.deltawolf.sea.util.Util;
 
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(Reference.MOD_ID)
 public class BlockList {
 	public static Block salt_pile;

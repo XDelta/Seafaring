@@ -37,10 +37,10 @@ public class OxygenTank extends ArmorItem {
 		if (!player.isCreative() && !player.isSpectator()) {
 			Block above = world.getBlockState(new BlockPos(player.getPosition().getX(), player.getPosition().getY() + 1, player.getPosition().getZ())).getBlock();
 			ItemStack chest = player.getItemStackFromSlot(EquipmentSlotType.CHEST);
-			if (player.isInWater()) {
+			if (player.isInWater() && !(Util.isInBubbleColumn(world, player))) {
 				if (above != Blocks.WATER && above != Blocks.SEAGRASS && above != Blocks.KELP && above != Blocks.KELP_PLANT && above != Blocks.TALL_SEAGRASS) {
 					this.repairTank(chest, player);
-				} else if (Util.isEquipped(player, ItemList.scuba_mask, 0) && chest.getItem() == ItemList.basic_tank) {
+				} else if (Util.isEquipped(player, ItemList.scuba_mask) && isTank(chest.getItem())) {
 					this.damageTank(chest, player);
 				}
 			} else {
@@ -50,12 +50,12 @@ public class OxygenTank extends ArmorItem {
 	}
 
 	private void repairTank(ItemStack chest, PlayerEntity player) {
-		if (chest.getItem().equals(ItemList.basic_tank) && chest.getDamage() < chest.getMaxDamage()) {
+		if (isTank(chest.getItem()) && chest.getDamage() < chest.getMaxDamage()) {
 			chest.damageItem(-(1), player, (Consumer)null);
 		}
 	}
 
-	private boolean isTank(Item tank) {
+	public static boolean isTank(Item tank) {
 		if(tank == ItemList.basic_tank) {
 			return true;
 		} else if(tank == ItemList.standard_tank) {
@@ -66,7 +66,7 @@ public class OxygenTank extends ArmorItem {
 			return false;
 		}
 	}
-
+//TODO ensure when filling oxygen bar of player that we don't take too much from tank, since tanks start at 200units and the player has 300
 	private void damageTank(ItemStack chest, PlayerEntity player) {
 		if (isTank(chest.getItem()) && chest.getDamage() < chest.getMaxDamage() - 20) {
 			int currentAir = player.getAir();
@@ -74,6 +74,9 @@ public class OxygenTank extends ArmorItem {
 			int airToFill = maxAir - currentAir;
 			player.setAir(player.getMaxAir());
 			if (airToFill > 1) {
+				if (airToFill > (chest.getMaxDamage()) - 20) {//over durability - 20 just
+					Util.Log().info("Extra:" + airToFill);
+				}
 				chest.damageItem(airToFill/2, player, (Consumer) null);
 				Util.Log().info("Air:" + airToFill);
 			}
@@ -88,7 +91,7 @@ public class OxygenTank extends ArmorItem {
 	public static int getLowWarn(Item chest) {
 		if(chest == ItemList.basic_tank) {
 			return 5;
-		} else if(chest == ItemList.standard_tank) {
+		} else if (chest == ItemList.standard_tank) {
 			return 8;
 		} else if (chest == ItemList.high_capacity_tank) {
 			return 18;

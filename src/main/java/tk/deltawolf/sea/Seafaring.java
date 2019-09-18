@@ -10,20 +10,20 @@ import tk.deltawolf.sea.lists.RendererList;
 import tk.deltawolf.sea.util.Util;
 import tk.deltawolf.sea.worldgen.WorldGen;
 
-@Mod(value = Reference.MOD_ID)
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod(Reference.MOD_ID)//value =
 public class Seafaring {
 	public static Seafaring instance;
 	//private final ProxyCommon proxy = DistExecutor.runForDist(() -> ProxyClient::new, () -> ProxyCommon::new);
 	public Seafaring() {
 		instance = this;
-		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::preInit);
+		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::postInit);
 		MinecraftForge.EVENT_BUS.register(this);
 		//proxy.construct();
 	}
-	private void preInit(final FMLCommonSetupEvent event) {
+
+	private void setup(final FMLCommonSetupEvent event) {
 		WorldGen.oreGen();
 		WorldGen.oceanGen();
 		Util.Log().info("Setting Up");
@@ -32,6 +32,7 @@ public class Seafaring {
 
 	private void clientRegistries(final FMLClientSetupEvent event) {
 		RendererList.registerEntityRenderers();
+		Util.Log().info("??4");
 		Util.Log().info("clientRegisteries method registered");
 	}
 

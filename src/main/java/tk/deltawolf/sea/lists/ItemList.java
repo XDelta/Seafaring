@@ -1,15 +1,17 @@
 package tk.deltawolf.sea.lists;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.ComposterBlock;
 import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
+import net.minecraft.util.IItemProvider;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.registries.ObjectHolder;
 import tk.deltawolf.sea.Reference;
 import tk.deltawolf.sea.itemgroup.SeaItemGroup;
 import tk.deltawolf.sea.items.armor.OxygenTank;
@@ -17,24 +19,30 @@ import tk.deltawolf.sea.items.armor.ScubaMask;
 import tk.deltawolf.sea.lists.materials.ArmorMaterials;
 import tk.deltawolf.sea.util.Util;
 
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
-@ObjectHolder(Reference.MOD_ID)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ItemList {
 	public static Item salt;
+	public static Item sea_moss;
+	public static Item pebble;
+	public static Item pearl;
+
+	public static Item hook;
+	public static Item reel;
+	public static Item reinforced_fishing_rod;
+	//public static Item pile_of_sand; //4x to make a block of sand
+	//mob drops
+	//public static Item starfish;
+	public static Item haddock;
+	//public static Item clam;
+	//salted food
 	public static Item salted_cod;
-	public static Item salted_haddock;
 	public static Item salted_meat;
 	public static Item salted_pufferfish;
 	public static Item salted_salmon;
-
-	public static Item sea_moss;
-	public static Item pebble;
-
-	public static Item pearl;
-	public static Item clam;
-	public static Item haddock;
+	public static Item salted_haddock;
+	//cooked food
 	public static Item cooked_haddock;
-
+	//armor
 	public static Item scuba_mask;
 	public static Item basic_tank;
 	public static Item standard_tank;
@@ -44,17 +52,21 @@ public class ItemList {
 	public static Item swamp_feeder_spawn_egg;
 
 	@SubscribeEvent
-	public static void registerItems(RegistryEvent.Register<Item> event) { //ForgeRegistry<Item> registry
+	public static void registerItems(final RegistryEvent.Register<Item> event) { //ForgeRegistry<Item> registry
 		Util.Log().info("Registering Items");
 		event.getRegistry().registerAll(
 			salt = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "salt"),
+			sea_moss = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "sea_moss"),
 			pebble = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "pebble"),
+			pearl = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "pearl"),
+			hook = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "hook"),
+			reel = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "reel"),
+			haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.HADDOCK)).setRegistryName(Reference.MOD_ID, "haddock"),
 			salted_cod = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_COD)).setRegistryName(Reference.MOD_ID, "salted_cod"),
-			salted_haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_HADDOCK)).setRegistryName(Reference.MOD_ID, "salted_haddock"),
 			salted_meat = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_MEAT)).setRegistryName(Reference.MOD_ID, "salted_meat"),
 			salted_pufferfish = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_PUFFER)).setRegistryName(Reference.MOD_ID, "salted_pufferfish"),
 			salted_salmon = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_SALMON)).setRegistryName(Reference.MOD_ID, "salted_salmon"),
-			haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.HADDOCK)).setRegistryName(Reference.MOD_ID, "haddock"),
+			salted_haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_HADDOCK)).setRegistryName(Reference.MOD_ID, "salted_haddock"),
 			cooked_haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.COOKED_HADDOCK)).setRegistryName(Reference.MOD_ID, "cooked_haddock"),
 
 			scuba_mask = new ScubaMask(ArmorMaterials.scuba, EquipmentSlotType.HEAD, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "scuba_mask"),
@@ -71,6 +83,8 @@ public class ItemList {
 			createItemBlockForBlock(BlockList.sea_stone, new Item.Properties().group(SeaItemGroup.tabSea))
 		);
 
+		registerCompostable(0.3F, ItemList.sea_moss);
+
 		Util.Log().info("Registered Items");
 	}
 
@@ -82,5 +96,9 @@ public class ItemList {
 		SpawnEggItem item = new SpawnEggItem(type, primary, secondary, new Item.Properties().group(SeaItemGroup.tabSea));
 		item.setRegistryName(Reference.MOD_ID, name);
 		return item;
+	}
+
+	public static void registerCompostable(float chance, IItemProvider item){
+		ComposterBlock.CHANCES.put(item.asItem(), chance);
 	}
 }

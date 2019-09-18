@@ -1,0 +1,28 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"  I",
+		" IS",
+		"WRH"
+	],
+	"key": {
+		"W": {
+			"item": "minecraft:stick"
+		},
+		"S": {
+			"item": "minecraft:string"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"H": {
+			"item": "sea:hook"
+		},
+		"R": {
+			"item": "sea:reel"
+		}
+	},
+	"result": {
+		"item": "minecraft:fishing_rod"
+	}
+}
