@@ -33,6 +33,7 @@ public class ItemList {
 	//mob drops
 	//public static Item starfish;
 	public static Item haddock;
+	public static Item swamp_feeder;
 	//public static Item clam;
 	//salted food
 	public static Item salted_cod;
@@ -62,6 +63,7 @@ public class ItemList {
 			hook = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "hook"),
 			reel = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "reel"),
 			haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.HADDOCK)).setRegistryName(Reference.MOD_ID, "haddock"),
+			swamp_feeder = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SWAMP_FEEDER)).setRegistryName(Reference.MOD_ID, "swamp_feeder"),
 			salted_cod = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_COD)).setRegistryName(Reference.MOD_ID, "salted_cod"),
 			salted_meat = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_MEAT)).setRegistryName(Reference.MOD_ID, "salted_meat"),
 			salted_pufferfish = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SALTED_PUFFER)).setRegistryName(Reference.MOD_ID, "salted_pufferfish"),

@@ -12,6 +12,7 @@ public class FoodList {
 	//hunger(2) = 1 shank / (0.2) sat = 0.2 saturation
 	//salted give less hunger more saturation and later will rot slower/ dehydrate you
 	public static final Food HADDOCK = (new Food.Builder()).hunger(2).saturation(0.1F).build();
+	public static final Food SWAMP_FEEDER = (new Food.Builder()).hunger(2).saturation(0.2F).effect(new EffectInstance(Effects.POISON, 300, 1), 0.6F).build();
 	public static final Food COOKED_HADDOCK = (new Food.Builder()).hunger(5).saturation(0.6F).build();
 	public static final Food SALTED_HADDOCK = (new Food.Builder()).hunger(1).saturation(0.15F).build();
 	//public static final Food COOKED_AND_SALTED_HADDOCK = (new Food.Builder()).hunger(4).saturation(0.7F).build();

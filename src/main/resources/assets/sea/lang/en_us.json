@@ -3,13 +3,12 @@
 
 	"_c": "blocks",
 	"block.sea.salt_pile": "Salt Pile [Placer]",
-	"block.sea.compressed_sponge": "[WIP]Compressed Sponge",
+	"block.sea.compressed_sponge": "Compressed Sponge",
 	"block.sea.wet_compressed_sponge": "Wet Compressed Sponge",
 	"block.sea.sea_stone": "Sea Stone [Placer]",
 
 	"_c": "items",
 	"item.sea.salt": "Salt",
-	"item.sea.sea_stone": "Sea Stone",
 	"item.sea.pebble": "Pebble",
 	"item.sea.sea_moss": "Sea Moss",
 	"item.sea.jerky": "[WIP]Jerky",
@@ -19,6 +18,7 @@
 	"item.sea.clam": "[WIP]Clam",
 	"item.sea.salted_cod": "Salted Cod",
 	"item.sea.haddock": "Haddock",
+	"item.sea.swamp_feeder": "Swamp Feeder",
 	"item.sea.cooked_haddock": "Cooked Haddock",
 	"item.sea.salted_haddock": "Salted Haddock",
 	"item.sea.salted_meat": "Salted Meat",
