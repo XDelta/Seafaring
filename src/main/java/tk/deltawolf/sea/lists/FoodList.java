@@ -26,7 +26,7 @@ public class FoodList {
 	public static final Food SALTED_MEAT = (new Food.Builder()).hunger(3).saturation(0.2F).effect(new EffectInstance(Effects.HUNGER, 300, 0), 0.5F).meat().build();
 
 	//Pufferfish 1/0.1
-	public static final Food SALTED_PUFFER = (new Food.Builder()).hunger(1).saturation(0.1F).effect(new EffectInstance(Effects.POISON, 600, 1), 1.0F).effect(new EffectInstance(Effects.HUNGER, 160, 2), 1.0F).effect(new EffectInstance(Effects.NAUSEA, 160, 1), 1.0F).build();
+	public static final Food SALTED_PUFFER = (new Food.Builder()).hunger(1).saturation(0.2F).effect(new EffectInstance(Effects.POISON, 600, 1), 1.0F).effect(new EffectInstance(Effects.HUNGER, 160, 2), 1.0F).effect(new EffectInstance(Effects.NAUSEA, 160, 1), 1.0F).build();
 
 	// Salmon 2/0.1
 	// Cooked Slamon 6/0.8
