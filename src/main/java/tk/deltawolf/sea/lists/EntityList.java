@@ -39,14 +39,13 @@ public class EntityList {
 		event.getRegistry().registerAll(
 			HADDOCK,
 			SWAMPFEEDER
-			//HADDOCK = EntityType.Builder.create(HaddockEntity::new, EntityClassification.WATER_CREATURE).size(0.2f,0.3f).build(Reference.MOD_ID + ":haddock").setRegistryName(Reference.MOD_ID, "haddock")
 		);
 		registerSpawns();
 	}
 
 	public static void registerSpawns() {
 		registerEntitySpawn(HADDOCK, 10,2,5, Biomes.COLD_OCEAN, Biomes.DEEP_COLD_OCEAN, Biomes.DEEP_OCEAN);
-		registerEntitySpawn(SWAMPFEEDER, 10,1,2, Biomes.SWAMP, Biomes.SWAMP_HILLS); //Biomes.SWAMP, Biomes.SWAMP_HILLS
+		registerEntitySpawn(SWAMPFEEDER, 10,1,2, Biomes.SWAMP, Biomes.SWAMP_HILLS);
 
 		registerSpawnConditions();
 	}
@@ -67,7 +66,7 @@ public class EntityList {
 	//TODO
 	private static boolean deepOceanCondition(EntityType<? extends WaterMobEntity> entityType, IWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
 		if(world.getDimension().getType() != DimensionType.OVERWORLD) return false;
-		return true;
+		return pos.getY() <= 40;
 	}
 
 	private static boolean swampCondition(EntityType<? extends WaterMobEntity> entityType, IWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
@@ -75,16 +74,18 @@ public class EntityList {
 		return (pos.getY() >= 50 && pos.getY() <= 64);
 	}
 
+	private static boolean mountainLakeCondition(EntityType<? extends WaterMobEntity> entityType, IWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
+		if(world.getDimension().getType() != DimensionType.OVERWORLD) return false;
+		return (pos.getY() >= 80 && pos.getY() <= 105);
+	}
+
 	private static boolean ravineCondition(EntityType<? extends WaterMobEntity> entityType, IWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
 		if(world.getDimension().getType() != DimensionType.OVERWORLD) return false;
 		return pos.getY() <= 30;
 	}
 	private static boolean netherCondition(EntityType<? extends MobEntity> entityType, IWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
-		if(world.getDimension().getType() != DimensionType.THE_NETHER) {
-			return false;
-		} else {
-			return true;
-		}
+		if(world.getDimension().getType() != DimensionType.THE_NETHER) return false;
+		return true;
 	}
 
 }

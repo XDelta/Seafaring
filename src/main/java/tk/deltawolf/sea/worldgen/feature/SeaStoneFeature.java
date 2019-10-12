@@ -57,7 +57,7 @@ public class SeaStoneFeature extends Feature<NoFeatureConfig> {
 	}
 	private static void process(Biome biome) {
 		if (biome.getCategory() == Biome.Category.OCEAN){
-			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SEA_STONE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 90.0D, 0.0D, Heightmap.Type.OCEAN_FLOOR_WG)));
+			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SEA_STONE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 140.0D, 1.1D, Heightmap.Type.OCEAN_FLOOR_WG)));
 		}
 	}
 }

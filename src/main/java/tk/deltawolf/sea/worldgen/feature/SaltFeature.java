@@ -57,7 +57,7 @@ public class SaltFeature extends Feature<NoFeatureConfig> {
 	}
 	private static void process(Biome biome) {
 		if (biome.getCategory() == Biome.Category.OCEAN){
-			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SALT_PILE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 100.0D, 0.0D, Heightmap.Type.OCEAN_FLOOR_WG)));
+			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SALT_PILE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 130.0D, 0.75D, Heightmap.Type.OCEAN_FLOOR_WG)));
 		}
 	}
 

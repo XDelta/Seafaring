@@ -1,8 +1,4 @@
 {
-	"textures": {
-		"1": "sea:block/sea_stone",
-		"particle": "sea:block/sea_stone"
-	},
 	"elements": [
 		{
 			"from": [6.9, 0, 7.9],
@@ -59,7 +55,6 @@
 			}
 		},
 		{
-			"name": "cube?",
 			"from": [7.25, 0, 6.84],
 			"to": [9.25, 1, 9.84],
 			"shade": false,

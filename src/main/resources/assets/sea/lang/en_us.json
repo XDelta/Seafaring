@@ -6,6 +6,7 @@
 	"block.sea.compressed_sponge": "Compressed Sponge",
 	"block.sea.wet_compressed_sponge": "Wet Compressed Sponge",
 	"block.sea.sea_stone": "Sea Stone [Placer]",
+	"block.sea.red_sea_grass": "[WIP]Red Sea Grass [Placer]",
 
 	"_c": "items",
 	"item.sea.salt": "Salt",
@@ -13,18 +14,24 @@
 	"item.sea.sea_moss": "Sea Moss",
 	"item.sea.jerky": "[WIP]Jerky",
 	"item.sea.pearl": "Pearl",
+	"item.sea.driftwood": "Driftwood",
+	"item.sea.message_in_a_bottle": "Message In a Bottle",
+
 	"item.sea.hook": "Hook",
 	"item.sea.reel": "Reel",
-	"item.sea.clam": "[WIP]Clam",
-	"item.sea.salted_cod": "Salted Cod",
+	"item.sea.fishing_rod": "[WIP]%1 Fishing Rod",
+
 	"item.sea.haddock": "Haddock",
 	"item.sea.swamp_feeder": "Swamp Feeder",
-	"item.sea.cooked_haddock": "Cooked Haddock",
-	"item.sea.salted_haddock": "Salted Haddock",
+	"item.sea.clam": "[WIP]Clam",
+
+	"item.sea.salted_cod": "Salted Cod",
 	"item.sea.salted_meat": "Salted Meat",
 	"item.sea.salted_pufferfish": "Salted Pufferfish",
 	"item.sea.salted_salmon": "Salted Salmon",
-	"item.sea.calamari": "Raw Calamari",
+	"item.sea.salted_haddock": "Salted Haddock",
+
+	"item.sea.cooked_haddock": "Cooked Haddock",
 
 	"item.sea.scuba_mask":"[WIP]Scuba Mask",
 	"item.sea.basic_tank":"[WIP]Basic Tank",
@@ -36,6 +43,20 @@
 
 	"_c": "entities",
 	"entity.sea.haddock": "Haddock",
-	"entity.sea.swamp_feeder": "Swamp Feeder"
+	"entity.sea.swamp_feeder": "Swamp Feeder",
 
+	"_c": "messages",
+	"sea.message": "The message crumbled apart in your hands",
+	"sea.message1": "The message crumbled apart in your hands",
+	"sea.message2": "You stare at a blank piece of paper",
+	"sea.message3": "One mans trash, is now your trash",
+	"sea.message4": "A fish comes out of the old bottle",
+	"sea.message5": "A hand full of moss was inside",
+	"sea.message6": "You here a noise behind you",
+	"sea.message7": "\"Yarg!!\"",
+	"sea.message8": "\"I don't think this will float\"",
+	"sea.message9": "\"//TODO put ship in bottle\"",
+	"sea.message10": "\"Local Loot NEAR YOU!! Bearing N60W,DPT45\"",
+	"sea.message11": "\"Local Loot NEAR YOU!! Bearing S30E,DPT24\"",
+	"sea.message12": "\"Local Loot NEAR YOU!! Bearing N26E,DPT37\""
 }
