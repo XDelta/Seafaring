@@ -1,10 +1,10 @@
 {
 	"variants":{
 		"waterlogged=false":[
-			{"model":"sea:block/sea_stone_0", "weight":20},
-			{"model":"sea:block/sea_stone_1", "weight":20},
-			{"model":"sea:block/sea_stone_2", "weight":15},
-			{"model":"sea:block/sea_stone_coal", "weight":15}
+			{"model":"sea:block/sea_stone_0", "weight":30},
+			{"model":"sea:block/sea_stone_1", "weight":30},
+			{"model":"sea:block/sea_stone_2", "weight":20},
+			{"model":"sea:block/sea_stone_coal", "weight":20}
 		],
 		"waterlogged=true":[
 			{"model":"sea:block/sea_stone_0", "weight":20},

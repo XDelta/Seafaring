@@ -31,6 +31,7 @@ public class ItemList {
 	public static Item message_in_a_bottle;
 
 	public static Item hook;
+	public static Item gold_hook;
 	public static Item reel;
 	public static Item fishing_rod;
 
@@ -69,6 +70,7 @@ public class ItemList {
 			message_in_a_bottle = new ItemMessageInABottle(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "message_in_a_bottle"),
 
 			hook = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "hook"),
+			gold_hook = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "gold_hook"),
 			reel = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "reel"),
 			fishing_rod = new ItemFishingRod(new Item.Properties().maxStackSize(1).group(SeaItemGroup.tabSea).setNoRepair()).setRegistryName(Reference.MOD_ID, "fishing_rod"),
 
