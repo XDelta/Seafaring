@@ -63,7 +63,6 @@ public class EntityList {
 		}
 	}
 
-	//TODO
 	private static boolean deepOceanCondition(EntityType<? extends WaterMobEntity> entityType, IWorld world, SpawnReason spawnReason, BlockPos pos, Random random) {
 		if(world.getDimension().getType() != DimensionType.OVERWORLD) return false;
 		return pos.getY() <= 40;

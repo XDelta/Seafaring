@@ -21,7 +21,6 @@ public class HaddockEntity extends AbstractGroupFishEntity {
 	protected void registerGoals() {
 		super.registerGoals();
 	}
-	//TODO pretend it is COD
 	protected ItemStack getFishBucket() {
 		return new ItemStack(Items.COD_BUCKET);
 	}

@@ -32,7 +32,6 @@ public class Seafaring {
 
 	private void clientRegistries(final FMLClientSetupEvent event) {
 		RendererList.registerEntityRenderers();
-		Util.Log().info("??4");
 		Util.Log().info("clientRegisteries method registered");
 	}
 
