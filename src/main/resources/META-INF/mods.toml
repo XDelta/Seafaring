@@ -4,7 +4,7 @@ issueTrackerURL="https://www.curseforge.com/minecraft/mc-mods/seafaring"
 
 [[mods]]
 modId="sea"
-version="0.1.45"
+version="0.1.47"
 displayName="Seafaring"
 updateJSONURL="https://mc.deltawolf.tk/assets/endpoints/sea/update.json"
 displayURL="https://www.curseforge.com/minecraft/mc-mods/seafaring"
