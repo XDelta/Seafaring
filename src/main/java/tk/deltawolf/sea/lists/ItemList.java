@@ -14,8 +14,10 @@ import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import tk.deltawolf.sea.Reference;
 import tk.deltawolf.sea.itemgroup.SeaItemGroup;
+import tk.deltawolf.sea.items.HookItem;
 import tk.deltawolf.sea.items.ItemFishingRod;
 import tk.deltawolf.sea.items.ItemMessageInABottle;
+import tk.deltawolf.sea.items.ReelItem;
 import tk.deltawolf.sea.items.armor.OxygenTank;
 import tk.deltawolf.sea.items.armor.ScubaMask;
 import tk.deltawolf.sea.lists.materials.ArmorMaterials;
@@ -69,10 +71,10 @@ public class ItemList {
 			driftwood = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "driftwood"),
 			message_in_a_bottle = new ItemMessageInABottle(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "message_in_a_bottle"),
 
-			hook = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "hook"),
-			gold_hook = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "gold_hook"),
-			reel = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "reel"),
-			fishing_rod = new ItemFishingRod(new Item.Properties().maxStackSize(1).group(SeaItemGroup.tabSea).setNoRepair()).setRegistryName(Reference.MOD_ID, "fishing_rod"),
+			hook = new HookItem(48,0,new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "hook"),
+			gold_hook = new HookItem(16,1,new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "gold_hook"),
+			reel = new ReelItem(32,0, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "reel"),
+			fishing_rod = new ItemFishingRod(new Item.Properties().maxStackSize(1).group(SeaItemGroup.tabSeaWIP).setNoRepair()).setRegistryName(Reference.MOD_ID, "fishing_rod"),
 
 			haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.HADDOCK)).setRegistryName(Reference.MOD_ID, "haddock"),
 			swamp_feeder = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.SWAMP_FEEDER)).setRegistryName(Reference.MOD_ID, "swamp_feeder"),
