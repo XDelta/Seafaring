@@ -1,0 +1,7 @@
+{
+	"parent": "sea:block/small_sea_stone",
+	"textures": {
+		"1": "sea:block/sea_stone_0",
+		"particle": "sea:block/sea_stone_0"
+	}
+}

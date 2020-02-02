@@ -1,5 +1,16 @@
 {
 	"variants":{
-		"":{"model":"sea:block/salt_pile"}
+		"waterlogged=false":[
+			{"model":"sea:block/salt_pile", "weight":20},
+			{"model":"sea:block/salt_pile", "weight":20, "y": 90 },
+			{"model":"sea:block/salt_pile", "weight":20, "y": 180 },
+			{"model":"sea:block/salt_pile", "weight":20, "y": 270 }
+		],
+		"waterlogged=true":[
+			{"model":"sea:block/salt_pile", "weight":20},
+			{"model":"sea:block/salt_pile", "weight":20, "y": 90 },
+			{"model":"sea:block/salt_pile", "weight":20, "y": 180 },
+			{"model":"sea:block/salt_pile", "weight":20, "y": 270 }
+		]
 	}
 }

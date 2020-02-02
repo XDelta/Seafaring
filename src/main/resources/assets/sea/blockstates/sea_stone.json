@@ -1,16 +1,76 @@
 {
 	"variants":{
-		"waterlogged=false":[
-			{"model":"sea:block/sea_stone_0", "weight":30},
-			{"model":"sea:block/sea_stone_1", "weight":30},
-			{"model":"sea:block/sea_stone_2", "weight":20},
-			{"model":"sea:block/sea_stone_coal", "weight":20}
+		"size=1,waterlogged=false":[
+			{"model":"sea:block/small_sea_stone_0", "weight":50},
+			{"model":"sea:block/small_sea_stone_1", "weight":30},
+			{"model":"sea:block/small_sea_stone_2", "weight":15},
+			{"model":"sea:block/small_sea_stone_coal", "weight":5},
+			{"model":"sea:block/small_sea_stone_0", "weight":50, "y": 90 },
+			{"model":"sea:block/small_sea_stone_1", "weight":30, "y": 90 },
+			{"model":"sea:block/small_sea_stone_2", "weight":15, "y": 90 },
+			{"model":"sea:block/small_sea_stone_coal", "weight":5, "y": 90 },
+			{"model":"sea:block/small_sea_stone_0", "weight":50, "y": 180 },
+			{"model":"sea:block/small_sea_stone_1", "weight":30, "y": 180 },
+			{"model":"sea:block/small_sea_stone_2", "weight":15, "y": 180 },
+			{"model":"sea:block/small_sea_stone_coal", "weight":5, "y": 180 },
+			{"model":"sea:block/small_sea_stone_0", "weight":50, "y": 270 },
+			{"model":"sea:block/small_sea_stone_1", "weight":30, "y": 270 },
+			{"model":"sea:block/small_sea_stone_2", "weight":15, "y": 270 },
+			{"model":"sea:block/small_sea_stone_coal", "weight":5, "y": 270 }
 		],
-		"waterlogged=true":[
-			{"model":"sea:block/sea_stone_0", "weight":20},
-			{"model":"sea:block/sea_stone_1", "weight":20},
-			{"model":"sea:block/sea_stone_2", "weight":15},
-			{"model":"sea:block/sea_stone_coal", "weight":15}
+		"size=1,waterlogged=true":[
+			{"model":"sea:block/small_sea_stone_0", "weight":30},
+			{"model":"sea:block/small_sea_stone_1", "weight":30},
+			{"model":"sea:block/small_sea_stone_2", "weight":20},
+			{"model":"sea:block/small_sea_stone_coal", "weight":20},
+			{"model":"sea:block/small_sea_stone_0", "weight":30, "y": 90 },
+			{"model":"sea:block/small_sea_stone_1", "weight":30, "y": 90 },
+			{"model":"sea:block/small_sea_stone_2", "weight":20, "y": 90 },
+			{"model":"sea:block/small_sea_stone_coal", "weight":20, "y": 90 },
+			{"model":"sea:block/small_sea_stone_0", "weight":30, "y": 180 },
+			{"model":"sea:block/small_sea_stone_1", "weight":30, "y": 180 },
+			{"model":"sea:block/small_sea_stone_2", "weight":20, "y": 180 },
+			{"model":"sea:block/small_sea_stone_coal", "weight":20, "y": 180 },
+			{"model":"sea:block/small_sea_stone_0", "weight":30, "y": 270 },
+			{"model":"sea:block/small_sea_stone_1", "weight":30, "y": 270 },
+			{"model":"sea:block/small_sea_stone_2", "weight":20, "y": 270 },
+			{"model":"sea:block/small_sea_stone_coal", "weight":20, "y": 270 }
+		],
+		"size=2,waterlogged=false":[
+			{"model":"sea:block/medium_sea_stone_0", "weight":50},
+			{"model":"sea:block/medium_sea_stone_1", "weight":30},
+			{"model":"sea:block/medium_sea_stone_2", "weight":15},
+			{"model":"sea:block/medium_sea_stone_coal", "weight":5},
+			{"model":"sea:block/medium_sea_stone_0", "weight":50, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_1", "weight":30, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_2", "weight":15, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_coal", "weight":5, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_0", "weight":50, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_1", "weight":30, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_2", "weight":15, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_coal", "weight":5, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_0", "weight":50, "y": 270 },
+			{"model":"sea:block/medium_sea_stone_1", "weight":30, "y": 270 },
+			{"model":"sea:block/medium_sea_stone_2", "weight":15, "y": 270 },
+			{"model":"sea:block/medium_sea_stone_coal", "weight":5, "y": 270 }
+		],
+		"size=2,waterlogged=true":[
+			{"model":"sea:block/medium_sea_stone_0", "weight":30},
+			{"model":"sea:block/medium_sea_stone_1", "weight":30},
+			{"model":"sea:block/medium_sea_stone_2", "weight":20},
+			{"model":"sea:block/medium_sea_stone_coal", "weight":20},
+			{"model":"sea:block/medium_sea_stone_0", "weight":30, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_1", "weight":30, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_2", "weight":20, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_coal", "weight":20, "y": 90 },
+			{"model":"sea:block/medium_sea_stone_0", "weight":30, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_1", "weight":30, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_2", "weight":20, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_coal", "weight":20, "y": 180 },
+			{"model":"sea:block/medium_sea_stone_0", "weight":30, "y": 270 },
+			{"model":"sea:block/medium_sea_stone_1", "weight":30, "y": 270 },
+			{"model":"sea:block/medium_sea_stone_2", "weight":20, "y": 270 },
+			{"model":"sea:block/medium_sea_stone_coal", "weight":20, "y": 270 }
 		]
 	}
 }

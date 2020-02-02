@@ -7,7 +7,7 @@ import net.minecraft.util.math.shapes.ISelectionContext;
 import net.minecraft.util.math.shapes.VoxelShape;
 import net.minecraft.world.IBlockReader;
 
-public class SaltPile extends WaterBlockFeature {
+public class SaltPile extends WaterloggedBlockBase {
 	protected static final VoxelShape SHAPE = Block.makeCuboidShape(3.0D, 0.0D, 4.0D, 12.0D, 3.5D, 12.0D);
 
 	public SaltPile(Block.Properties properties) {

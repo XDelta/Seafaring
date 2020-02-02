@@ -4,7 +4,6 @@ import com.mojang.datafixers.Dynamic;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.KelpTopBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
@@ -25,7 +24,8 @@ import tk.deltawolf.sea.lists.BlockList;
 import java.util.Random;
 import java.util.function.Function;
 
-import static tk.deltawolf.sea.blocks.WaterBlockFeature.WATERLOGGED;
+import static tk.deltawolf.sea.blocks.SeaStone.SIZE;
+import static tk.deltawolf.sea.blocks.WaterloggedBlockBase.WATERLOGGED;
 
 public class SeaStoneFeature extends Feature<NoFeatureConfig> {
 	public SeaStoneFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactory) {
@@ -43,7 +43,7 @@ public class SeaStoneFeature extends Feature<NoFeatureConfig> {
 		int j = worldIn.getHeight(Heightmap.Type.OCEAN_FLOOR, pos.getX(), pos.getZ());
 		BlockPos blockpos = new BlockPos(pos.getX(), j, pos.getZ());
 		if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER) {
-			BlockState blockstate = BlockList.sea_stone.getDefaultState().with(WATERLOGGED, Boolean.valueOf(true));
+			BlockState blockstate = BlockList.sea_stone.getDefaultState().with(WATERLOGGED, Boolean.valueOf(true)).with(SIZE, Integer.valueOf(rand.nextInt(2)+1));
 			if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER && worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.WATER && this.isValidSpawnPosition(blockstate, worldIn, blockpos)) {
 				worldIn.setBlockState(blockpos, blockstate, 2);
 				return true;

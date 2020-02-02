@@ -4,7 +4,6 @@ import com.mojang.datafixers.Dynamic;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
-import net.minecraft.block.KelpTopBlock;
 import net.minecraft.util.Direction;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.world.IWorld;
@@ -25,7 +24,7 @@ import tk.deltawolf.sea.lists.BlockList;
 import java.util.Random;
 import java.util.function.Function;
 
-import static tk.deltawolf.sea.blocks.WaterBlockFeature.WATERLOGGED;
+import static tk.deltawolf.sea.blocks.WaterloggedBlockBase.WATERLOGGED;
 
 public class SaltFeature extends Feature<NoFeatureConfig> {
 	public SaltFeature(Function<Dynamic<?>, ? extends NoFeatureConfig> configFactory) {
@@ -60,5 +59,4 @@ public class SaltFeature extends Feature<NoFeatureConfig> {
 			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SALT_PILE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 130.0D, 0.75D, Heightmap.Type.OCEAN_FLOOR_WG)));
 		}
 	}
-
 }
