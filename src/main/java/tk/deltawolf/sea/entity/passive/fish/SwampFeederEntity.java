@@ -38,6 +38,6 @@ public class SwampFeederEntity extends AbstractGroupFishEntity {
 
 	protected void registerAttributes() {
 		super.registerAttributes();
-		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(25.0D);
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(8.0D);
 	}
 }

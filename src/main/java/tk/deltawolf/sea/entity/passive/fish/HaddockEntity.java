@@ -36,4 +36,9 @@ public class HaddockEntity extends AbstractGroupFishEntity {
 	protected SoundEvent getFlopSound() {
 		return SoundEvents.ENTITY_COD_FLOP;
 	}
+
+	protected void registerAttributes() {
+		super.registerAttributes();
+		this.getAttribute(SharedMonsterAttributes.MAX_HEALTH).setBaseValue(8.0D);
+	}
 }
