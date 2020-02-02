@@ -87,10 +87,10 @@ public class ItemList {
 
 			cooked_haddock = new Item(new Item.Properties().group(SeaItemGroup.tabSea).food(FoodList.COOKED_HADDOCK)).setRegistryName(Reference.MOD_ID, "cooked_haddock"),
 
-			scuba_mask = new ScubaMask(ArmorMaterials.scuba, EquipmentSlotType.HEAD, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "scuba_mask"),
-			basic_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 10, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "basic_tank"),
-			standard_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 20, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "standard_tank"),
-			high_capacity_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 60, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "high_capacity_tank"),
+			scuba_mask = new ScubaMask(ArmorMaterials.scuba, EquipmentSlotType.HEAD, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "scuba_mask"),
+			basic_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 10, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "basic_tank"),
+			standard_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 20, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "standard_tank"),
+			high_capacity_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 60, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "high_capacity_tank"),
 
 			haddock_spawn_egg = registerSpawnEgg(EntityList.HADDOCK,0x93a1b7, 0x526675, "haddock_spawn_egg"),
 			swamp_feeder_spawn_egg = registerSpawnEgg(EntityList.SWAMPFEEDER,0x5b9450, 0x33522d, "swamp_feeder_spawn_egg"),
@@ -99,11 +99,12 @@ public class ItemList {
 			createItemBlockForBlock(BlockList.compressed_sponge, new Item.Properties().group(SeaItemGroup.tabSea)),
 			createItemBlockForBlock(BlockList.wet_compressed_sponge, new Item.Properties().group(SeaItemGroup.tabSea)),
 			createItemBlockForBlock(BlockList.sea_stone, new Item.Properties().group(SeaItemGroup.tabSea)),
-			createItemBlockForBlock(BlockList.red_sea_grass, new Item.Properties().group(SeaItemGroup.tabSea))
+			createItemBlockForBlock(BlockList.red_sea_grass, new Item.Properties().group(SeaItemGroup.tabSeaWIP)),
+			createItemBlockForBlock(BlockList.tackle_bench, new Item.Properties().group(SeaItemGroup.tabSeaWIP))
 		);
 
 		registerCompostable(0.3F, ItemList.sea_moss);
-
+		OxygenTank.registerTanks();
 		Util.Log().info("Registered Items");
 	}
 
