@@ -6,7 +6,6 @@ import net.minecraft.entity.EntityType;
 import net.minecraft.inventory.EquipmentSlotType;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.item.SpawnEggItem;
 import net.minecraft.util.IItemProvider;
 import net.minecraftforge.event.RegistryEvent;
@@ -16,8 +15,10 @@ import tk.deltawolf.sea.Reference;
 import tk.deltawolf.sea.itemgroup.SeaItemGroup;
 import tk.deltawolf.sea.items.HookItem;
 import tk.deltawolf.sea.items.ItemFishingRod;
-import tk.deltawolf.sea.items.ItemMessageInABottle;
+import tk.deltawolf.sea.items.MessageInABottleItem;
 import tk.deltawolf.sea.items.ReelItem;
+import tk.deltawolf.sea.items.TestItem;
+import tk.deltawolf.sea.items.armor.FlippersItem;
 import tk.deltawolf.sea.items.armor.OxygenTank;
 import tk.deltawolf.sea.items.armor.ScubaMask;
 import tk.deltawolf.sea.lists.materials.ArmorMaterials;
@@ -31,6 +32,10 @@ public class ItemList {
 	public static Item pearl;
 	public static Item driftwood;
 	public static Item message_in_a_bottle;
+	public static Item valve;
+	public static Item polymer;
+	//test
+	public static Item test;
 
 	public static Item hook;
 	public static Item gold_hook;
@@ -56,6 +61,7 @@ public class ItemList {
 	public static Item basic_tank;
 	public static Item standard_tank;
 	public static Item high_capacity_tank;
+	public static Item flippers;
 	//eggs
 	public static Item haddock_spawn_egg;
 	public static Item swamp_feeder_spawn_egg;
@@ -69,7 +75,10 @@ public class ItemList {
 			pebble = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "pebble"),
 			pearl = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "pearl"),
 			driftwood = new Item(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "driftwood"),
-			message_in_a_bottle = new ItemMessageInABottle(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "message_in_a_bottle"),
+			message_in_a_bottle = new MessageInABottleItem(new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "message_in_a_bottle"),
+			valve = new Item(new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "valve"),
+			polymer = new Item(new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "polymer"),
+			test = new TestItem(new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "test"),
 
 			hook = new HookItem(48,0,new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "hook"),
 			gold_hook = new HookItem(16,1,new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "gold_hook"),
@@ -91,6 +100,7 @@ public class ItemList {
 			basic_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 10, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "basic_tank"),
 			standard_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 20, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "standard_tank"),
 			high_capacity_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 60, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "high_capacity_tank"),
+			flippers = new FlippersItem(ArmorMaterials.scuba, EquipmentSlotType.FEET, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "flippers"),
 
 			haddock_spawn_egg = registerSpawnEgg(EntityList.HADDOCK,0x93a1b7, 0x526675, "haddock_spawn_egg"),
 			swamp_feeder_spawn_egg = registerSpawnEgg(EntityList.SWAMPFEEDER,0x5b9450, 0x33522d, "swamp_feeder_spawn_egg"),

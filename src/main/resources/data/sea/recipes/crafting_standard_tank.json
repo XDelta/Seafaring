@@ -1,0 +1,22 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" B ",
+		"LIL",
+		" I "
+	],
+	"key": {
+		"B": {
+			"item": "sea:basic_tank"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"L": {
+			"item": "minecraft:leather"
+		}
+	},
+	"result": {
+		"item": "sea:basic_tank"
+	}
+}

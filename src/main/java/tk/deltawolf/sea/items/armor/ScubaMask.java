@@ -19,6 +19,10 @@ public class ScubaMask extends ArmorItem {
 		super(materialIn, slot, builder);
 	}
 
+	public boolean isRepairable(ItemStack stack) {
+		return false;
+	}
+
 	@Override
 	@OnlyIn(Dist.CLIENT)
 	public void addInformation(ItemStack stack, @Nullable World worldIn, List<ITextComponent> tooltip, ITooltipFlag flagIn) {

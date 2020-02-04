@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		"S S",
+		"P P",
+		"P P"
+	],
+	"key": {
+		"P": {
+			"item": "sea:polymer"
+		},
+		"S": {
+			"item": "minecraft:string"
+		}
+	},
+	"result": {
+		"item": "sea:flippers"
+	}
+}

@@ -1,0 +1,25 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" V ",
+		"SIS",
+		"PIP"
+	],
+	"key": {
+		"V": {
+			"item": "sea:valve"
+		},
+		"I": {
+			"item": "minecraft:iron_ingot"
+		},
+		"S": {
+			"item": "sea:standard_tank"
+		},
+		"P": {
+			"item": "sea:polymer"
+		}
+	},
+	"result": {
+		"item": "sea:high_capacity_tank"
+	}
+}
