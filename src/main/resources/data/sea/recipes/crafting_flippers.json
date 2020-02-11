@@ -1,7 +1,7 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"S S",
+		"R R",
 		"P P",
 		"P P"
 	],
@@ -10,7 +10,7 @@
 			"item": "sea:polymer"
 		},
 		"S": {
-			"item": "minecraft:string"
+			"item": "forge:items/rubber"
 		}
 	},
 	"result": {

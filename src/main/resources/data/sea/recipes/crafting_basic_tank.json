@@ -1,13 +1,16 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		" V ",
+		" VR",
 		"LIL",
 		" I "
 	],
 	"key": {
 		"V": {
 			"item": "sea:valve"
+		},
+		"R": {
+			"item": "sea:rubber_tubing"
 		},
 		"I": {
 			"item": "minecraft:iron_ingot"
