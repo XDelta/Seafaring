@@ -10,7 +10,7 @@
 			"item": "sea:valve"
 		},
 		"I": {
-			"item": "minecraft:iron_ingot"
+			"tag": "forge:ingots/iron"
 		},
 		"S": {
 			"item": "sea:standard_tank"

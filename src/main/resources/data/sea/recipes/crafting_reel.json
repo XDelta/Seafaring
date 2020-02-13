@@ -7,10 +7,10 @@
 	],
 	"key": {
 		"I": {
-			"item": "minecraft:iron_nugget"
+			"tag": "forge:nuggets/iron"
 		},
 		"S": {
-			"item": "minecraft:string"
+			"tag": "forge:string"
 		}
 	},
 	"result": {

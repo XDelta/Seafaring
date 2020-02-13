@@ -9,7 +9,7 @@
 			"item": "sea:sea_moss"
 		},
 		{
-			"item": "minecraft:cobblestone"
+			"tag": "forge:cobblestone"
 		}
 	],
 

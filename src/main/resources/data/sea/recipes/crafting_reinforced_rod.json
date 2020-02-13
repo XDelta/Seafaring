@@ -7,13 +7,13 @@
 	],
 	"key": {
 		"W": {
-			"item": "minecraft:stick"
+			"tag": "forge:rods/wooden"
 		},
 		"S": {
-			"item": "minecraft:string"
+			"tag": "forge:string"
 		},
 		"I": {
-			"item": "minecraft:iron_ingot"
+			"tag": "forge:ingots/iron"
 		},
 		"H": {
 			"item": "sea:hook"

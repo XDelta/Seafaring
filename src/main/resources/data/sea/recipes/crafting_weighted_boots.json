@@ -1,0 +1,19 @@
+{
+	"type": "minecraft:crafting_shaped",
+	"pattern": [
+		" C ",
+		"CLC",
+		" C "
+	],
+	"key": {
+		"C": {
+			"tag": "forge:cobblestone"
+		},
+		"L": {
+			"item": "minecraft:leather_boots"
+		}
+	},
+	"result": {
+		"item": "sea:weighted_boots"
+	}
+}

@@ -6,10 +6,10 @@
 	],
 	"key": {
 		"I": {
-			"item": "minecraft:iron_nugget"
+			"tag": "forge:nuggets/iron"
 		},
 		"B": {
-			"item": "minecraft:button"
+			"item": "minecraft:stone_button"
 		}
 	},
 	"result": {

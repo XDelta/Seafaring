@@ -1,19 +1,16 @@
 {
 	"type": "minecraft:crafting_shaped",
 	"pattern": [
-		"R R",
-		"P P",
-		"P P"
+		"R",
+		"R"
 	],
 	"key": {
-		"P": {
-			"item": "sea:polymer"
-		},
 		"R": {
 			"tag": "forge:items/rubber"
 		}
 	},
 	"result": {
-		"item": "sea:flippers"
+		"item": "sea:rubber_tubing",
+		"count": 3
 	}
 }
