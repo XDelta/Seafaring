@@ -1,0 +1,10 @@
+{
+	"variants": {
+		"facing=north": {"model": "sea:block/tackle_bench"},
+		"facing=south": {"model": "sea:block/tackle_bench", "y": 180},
+		"facing=west": {"model": "sea:block/tackle_bench", "y": 270},
+		"facing=east": {"model": "sea:block/tackle_bench", "y": 90},
+		"facing=up": {"model": "sea:block/tackle_bench", "x": -90},
+		"facing=down": {"model": "sea:block/tackle_bench", "x": 90}
+	}
+}

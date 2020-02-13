@@ -20,6 +20,8 @@ public class BlockList {
 	public static Block sea_stone;
 	public static Block red_sea_grass;
 
+	public static Block tackle_bench;
+
 	@SubscribeEvent
 	public static void registerBlocks(RegistryEvent.Register<Block> event) {
 		event.getRegistry().registerAll(
@@ -27,8 +29,8 @@ public class BlockList {
 			compressed_sponge = new CompressedSponge(Block.Properties.create(Material.SPONGE).hardnessAndResistance(0.6f).sound(SoundType.PLANT)).setRegistryName(Reference.MOD_ID, "compressed_sponge"),
 			wet_compressed_sponge = new WetCompressedSponge(Block.Properties.create(Material.SPONGE).hardnessAndResistance(0.6f).sound(SoundType.PLANT)).setRegistryName(Reference.MOD_ID, "wet_compressed_sponge"),
 			sea_stone = new SeaStone(Block.Properties.create(Material.OCEAN_PLANT).hardnessAndResistance(0.05f, 0.05f).variableOpacity()).setRegistryName(Reference.MOD_ID, "sea_stone"),
-			red_sea_grass = new RedSeaGrass(Block.Properties.create(Material.SEA_GRASS).hardnessAndResistance(0f).doesNotBlockMovement().sound(SoundType.WET_GRASS)).setRegistryName(Reference.MOD_ID, "red_sea_grass")
-
+			red_sea_grass = new RedSeaGrass(Block.Properties.create(Material.SEA_GRASS).hardnessAndResistance(0f).doesNotBlockMovement().sound(SoundType.WET_GRASS)).setRegistryName(Reference.MOD_ID, "red_sea_grass"),
+			tackle_bench = new TackleBench(Block.Properties.create(Material.ANVIL).hardnessAndResistance(0.6f).sound(SoundType.ANVIL)).setRegistryName(Reference.MOD_ID, "tackle_bench")
 			// KELP = register("kelp", new KelpTopBlock(Block.Properties.create(Material.OCEAN_PLANT).doesNotBlockMovement().tickRandomly().zeroHardnessAndResistance().sound(SoundType.WET_GRASS)));
 			// KELP_PLANT = register("kelp_plant", new KelpBlock((KelpTopBlock)KELP, Block.Properties.create(Material.OCEAN_PLANT).doesNotBlockMovement().zeroHardnessAndResistance().sound(SoundType.WET_GRASS)));
 		);

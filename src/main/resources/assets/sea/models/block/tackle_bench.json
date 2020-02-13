@@ -1,0 +1,12 @@
+{
+	"parent": "block/cube",
+	"textures": {
+		"particle": "sea:block/sea_stone_1",
+		"north": "sea:block/sea_stone_2",
+		"south": "sea:block/sea_stone_1",
+		"east": "sea:block/sea_stone_1",
+		"west": "sea:block/sea_stone_1",
+		"up": "sea:block/sea_stone_1",
+		"down": "sea:block/sea_stone_1"
+	}
+}
