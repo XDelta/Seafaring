@@ -18,7 +18,7 @@ import tk.deltawolf.sea.entity.passive.fish.SwampFeederEntity;
 
 import java.util.Random;
 
-@Mod.EventBusSubscriber(modid = Reference.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
+@Mod.EventBusSubscriber(bus = Mod.EventBusSubscriber.Bus.MOD)
 @ObjectHolder(Reference.MOD_ID)
 public class EntityList {
 	public static EntityType<HaddockEntity> HADDOCK = createEntity(HaddockEntity::new, EntityClassification.WATER_CREATURE,"haddock",0.2f,0.3f, 20);
@@ -44,8 +44,8 @@ public class EntityList {
 	}
 
 	public static void registerSpawns() {
-		registerEntitySpawn(HADDOCK, 10,2,5, Biomes.COLD_OCEAN, Biomes.DEEP_COLD_OCEAN, Biomes.DEEP_OCEAN);
-		registerEntitySpawn(SWAMPFEEDER, 10,1,2, Biomes.SWAMP, Biomes.SWAMP_HILLS);
+		registerEntitySpawn(HADDOCK, 10,2,5, Biomes.COLD_OCEAN, Biomes.DEEP_COLD_OCEAN, Biomes.DEEP_FROZEN_OCEAN, Biomes.DEEP_OCEAN, Biomes.FROZEN_OCEAN);
+		registerEntitySpawn(SWAMPFEEDER, 10,1,2, Biomes.JUNGLE, Biomes.JUNGLE_EDGE, Biomes.JUNGLE_HILLS, Biomes.MODIFIED_JUNGLE, Biomes.MODIFIED_JUNGLE_EDGE, Biomes.SWAMP, Biomes.SWAMP_HILLS);
 
 		registerSpawnConditions();
 	}
