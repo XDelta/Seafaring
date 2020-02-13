@@ -12,9 +12,10 @@ import tk.deltawolf.sea.Reference;
 import tk.deltawolf.sea.lists.ItemList;
 
 public enum ArmorMaterials implements IArmorMaterial {
-	scuba("scuba", 30, new int[] {1, 1, 0, 0}, 0, Items.IRON_BLOCK, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0f);
+	scuba("scuba", 30, new int[] {1, 0, 1, 1}, 0, ItemList.rubber, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0f),
+	weighted("weighted", 30, new int[] {2, 0, 2, 2}, 0, Items.COBBLESTONE, SoundEvents.ITEM_ARMOR_EQUIP_IRON, 2.0f);
 
-	private static final int[] max_damage_array = new int[]{11, 14, 16, 13}; //feet, legs, body, head
+	private static final int[] max_damage_array = new int[]{10, 1, 1, 13}; //feet, legs, body, head
 	private String name;
 	private int durability, enchantability;
 	private Item repairItem;

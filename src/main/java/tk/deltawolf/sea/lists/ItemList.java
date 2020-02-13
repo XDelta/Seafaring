@@ -62,6 +62,7 @@ public class ItemList {
 	public static Item standard_tank;
 	public static Item high_capacity_tank;
 	public static Item flippers;
+	public static Item weighted_boots;
 	//eggs
 	public static Item haddock_spawn_egg;
 	public static Item swamp_feeder_spawn_egg;
@@ -101,6 +102,7 @@ public class ItemList {
 			standard_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 20, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "standard_tank"),
 			high_capacity_tank = new OxygenTank(ArmorMaterials.scuba, EquipmentSlotType.CHEST, 60, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "high_capacity_tank"),
 			flippers = new FlippersItem(ArmorMaterials.scuba, EquipmentSlotType.FEET, new Item.Properties().group(SeaItemGroup.tabSeaWIP)).setRegistryName(Reference.MOD_ID, "flippers"),
+			weighted_boots = new WeightedBootsItem(ArmorMaterials.weighted, EquipmentSlotType.FEET, new Item.Properties().group(SeaItemGroup.tabSea)).setRegistryName(Reference.MOD_ID, "weighted_boots"),
 
 			haddock_spawn_egg = registerSpawnEgg(EntityList.HADDOCK,0x93a1b7, 0x526675, "haddock_spawn_egg"),
 			swamp_feeder_spawn_egg = registerSpawnEgg(EntityList.SWAMPFEEDER,0x5b9450, 0x33522d, "swamp_feeder_spawn_egg"),

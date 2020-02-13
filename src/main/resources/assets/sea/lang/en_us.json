@@ -38,6 +38,8 @@
 	"item.sea.basic_tank":"[WIP]Basic Tank",
 	"item.sea.standard_tank":"[WIP]Standard Tank",
 	"item.sea.high_capacity_tank":"[WIP]High Capacity Tank",
+	"item.sea.flippers":"[WIP]Flippers",
+	"item.sea.weighted_boots":"Weighted Boots",
 
 	"item.sea.haddock_spawn_egg" : "Haddock Spawn Egg",
 	"item.sea.swamp_feeder_spawn_egg" : "Swamp Feeder Spawn Egg",
