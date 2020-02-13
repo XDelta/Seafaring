@@ -6,6 +6,8 @@ import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import tk.deltawolf.sea.handler.GameEventHandler;
+import tk.deltawolf.sea.lists.ContainerList;
 import tk.deltawolf.sea.lists.RendererList;
 import tk.deltawolf.sea.util.Util;
 import tk.deltawolf.sea.worldgen.WorldGen;
@@ -20,14 +22,13 @@ public class Seafaring {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientRegistries);
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::postInit);
 		MinecraftForge.EVENT_BUS.register(this);
-		//proxy.construct();
+		GameEventHandler.init();
 	}
 
 	private void setup(final FMLCommonSetupEvent event) {
 		WorldGen.oreGen();
 		WorldGen.oceanGen();
-		Util.Log().info("Setting Up");
-		//proxy.preInit();
+		ContainerList.init();
 	}
 
 	private void clientRegistries(final FMLClientSetupEvent event) {
