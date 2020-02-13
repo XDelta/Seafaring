@@ -1,5 +1,6 @@
 {
 	"itemGroup.tabSea": "Seafaring",
+	"itemGroup.tabSeaWIP": "Seafaring WIP Items",
 
 	"_c": "blocks",
 	"block.sea.salt_pile": "Salt Pile [Placer]",
@@ -17,11 +18,16 @@
 	"item.sea.pearl": "Pearl",
 	"item.sea.driftwood": "Driftwood",
 	"item.sea.message_in_a_bottle": "Message In a Bottle",
+	"item.sea.valve": "[WIP]Valve",
+	"item.sea.polymer": "[WIP]Polymer",
+	"item.sea.rubber": "[WIP]Rubber",
+	"item.sea.rubber_tubing": "[WIP]Rubber Tubing",
+	"item.sea.test": "[TEST]Testing Item",
 
 	"item.sea.hook": "Hook",
 	"item.sea.gold_hook": "Gold Hook",
 	"item.sea.reel": "Reel",
-	"item.sea.fishing_rod": "[WIP]%1 Fishing Rod",
+	"item.sea.fishing_rod": "[WIP]%1 %2 Fishing Rod",
 
 	"item.sea.haddock": "Haddock",
 	"item.sea.swamp_feeder": "Swamp Feeder",
@@ -62,5 +68,29 @@
 	"sea.message9": "\"//TODO put ship in bottle\"",
 	"sea.message10": "\"Local Loot NEAR YOU!! Bearing N60W,DPT45\"",
 	"sea.message11": "\"Local Loot NEAR YOU!! Bearing S30E,DPT24\"",
-	"sea.message12": "\"Local Loot NEAR YOU!! Bearing N26E,DPT37\""
+	"sea.message12": "\"Local Loot NEAR YOU!! Bearing N26E,DPT37\"",
+
+	"_c": "world",
+	"createWorld.sea.ocean.title": "Ocean Generation Settings",
+	"createWorld.sea.ocean.size.small": "Small",
+	"createWorld.sea.ocean.size.medium": "Medium",
+	"createWorld.sea.ocean.size.large": "Large",
+	"createWorld.sea.ocean.size": "Biome Size",
+	"createWorld.sea.ocean.depth.normal": "Normal",
+	"createWorld.sea.ocean.depth.bathyal": "Bathyal",
+	"createWorld.sea.ocean.depth.abyssal": "Abyssal",
+	"createWorld.sea.ocean.depth": "World Depth",
+
+	"_c": "tooltips",
+	"item.sea.tooltip.shift": "§7Hold §e§oShift§r§7 for Details",
+	"item.sea.tooltip.alt": "§7Hold §d§oAlt§r§7 for More Details",
+	"item.sea.tooltip.ctrl": "§7Hold §b§oCtrl§r§7 for Advanced Details",
+	"item.sea.test.tooltip": "Testing item tooltip",
+	"item.sea.test.shift": "§e§oLets Get Schwifty",
+	"item.sea.test.alt": "§d§oAlternatives Here",
+	"item.sea.test.ctrl": "§b§oNoControl",
+
+	"item.sea.weighted_boots.tooltip": "Float like a rock",
+	"item.sea.message_in_a_bottle.tooltip": "Well, it's a bottle with a message inside",
+	"item.sea.scuba_mask.tooltip": "Requires a tank to use"
 }
