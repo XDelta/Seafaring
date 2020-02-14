@@ -87,6 +87,7 @@ public class FlippersItem extends ArmorItem {
 
 	@Nullable
 	@Override
+	@OnlyIn(Dist.CLIENT)
 	public BipedModel getArmorModel(LivingEntity entityLiving, ItemStack itemStack, EquipmentSlotType armorSlot, BipedModel _default) {
 		return new FlippersModel();
 	}
