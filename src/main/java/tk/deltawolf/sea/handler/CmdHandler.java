@@ -13,7 +13,6 @@ import tk.deltawolf.sea.util.Util;
 
 public class CmdHandler {
 
-	@OnlyIn(Dist.CLIENT)
 	@SubscribeEvent
 	public void onServerStarting(FMLServerStartingEvent event) {
 		CommandDispatcher dispatcher = event.getCommandDispatcher();
@@ -23,6 +22,7 @@ public class CmdHandler {
 			CmdGmInt.register(dispatcher); // /gm 1
 			CmdGmChar.register(dispatcher); // /gm c or /gm sp
 			CmdGmX.register(dispatcher); // /gm* and /gm# cmds
+			Util.Log().info("Registered Commands");
 		} catch (Exception e) {
 			Util.Log().error("Error Registering Commands");
 			Util.Log().error(e);
