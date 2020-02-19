@@ -10,7 +10,7 @@
 			"item": "sea:polymer"
 		},
 		"R": {
-			"tag": "forge:items/rubber"
+			"item": "sea:rubber_tubing"
 		}
 	},
 	"result": {

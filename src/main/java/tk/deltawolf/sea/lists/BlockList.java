@@ -1,7 +1,6 @@
 package tk.deltawolf.sea.lists;
 
 import net.minecraft.block.*;
-import net.minecraft.block.Blocks;
 import net.minecraft.block.material.Material;
 import net.minecraftforge.event.RegistryEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;

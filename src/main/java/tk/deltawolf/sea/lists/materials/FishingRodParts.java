@@ -15,7 +15,6 @@ public enum FishingRodParts implements IStringSerializable {
 	IRONTREBLE(7, "iron_treble_hook","hook",32,1,""),
 
 	REEL(8, "wood_rod","reel",32,0,""),
-
 	BELL(9, "bell","extra",1,0,"");
 
 
@@ -43,9 +42,7 @@ public enum FishingRodParts implements IStringSerializable {
 	public int getLuckModifier() { return luckModifier; }
 	public String getLore() { return this.lore; }
 
-	//nbt for hook type and reel type when recipes can support setting nbt
-
-	//disable vanilla rod
+	//disable vanilla rod?
 
 	//mods:
 	//hook
@@ -60,7 +57,6 @@ public enum FishingRodParts implements IStringSerializable {
 
 	//custom bench to make new fishing rods
 	//base texture and depending on attachments overlay a texture on
-
 
 	//parts: rod/reel/hook/extra
 }

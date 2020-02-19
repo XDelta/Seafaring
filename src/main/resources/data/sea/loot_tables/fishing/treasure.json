@@ -6,18 +6,22 @@
 			"entries": [
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"name": "minecraft:lily_pad"
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"name": "minecraft:name_tag"
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"name": "minecraft:saddle"
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"functions": [
 						{
 							"function": "minecraft:set_damage",
@@ -36,6 +40,7 @@
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"functions": [
 						{
 							"function": "minecraft:set_damage",
@@ -54,6 +59,7 @@
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"functions": [
 						{
 							"function": "minecraft:enchant_with_levels",
@@ -65,10 +71,12 @@
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"name": "minecraft:nautilus_shell"
 				},
 				{
 					"type": "minecraft:item",
+					"weight": 10,
 					"name": "sea:message_in_a_bottle"
 				}
 			]

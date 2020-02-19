@@ -38,9 +38,8 @@ public class Util {
 		return logger;
 	}
 	/**
-	 * Checks for an armor item equiped in slot<p>
-	 * Usage: isEquipped(player, ItemList.ScubaMask, 0);<p>
-	 * slot 0-3 for head-feet
+	 * Checks for an armor item equipped in slot<p>
+	 * Usage: isEquipped(player, ItemList.ScubaMask);<p>
 	 */
 	public static boolean isEquipped(PlayerEntity player, Item armor) {
 		if(player.getItemStackFromSlot(EquipmentSlotType.HEAD).getItem() == armor) return true;
