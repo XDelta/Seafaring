@@ -8,14 +8,15 @@ import net.minecraft.item.Items;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import tk.deltawolf.sea.lists.EntityList;
+import tk.deltawolf.sea.lists.ItemList;
 
 //shrug, it works tho
 @SuppressWarnings("ALL") //temp
 public class HaddockEntity extends AbstractGroupFishEntity {
 	public HaddockEntity(EntityType<? extends HaddockEntity> entityType, World world) {
-		super((EntityType<? extends HaddockEntity>) EntityList.HADDOCK, world);
+		super(entityType, world);
 	}
 
 	protected void registerGoals() {
@@ -35,6 +36,11 @@ public class HaddockEntity extends AbstractGroupFishEntity {
 	}
 	protected SoundEvent getFlopSound() {
 		return SoundEvents.ENTITY_COD_FLOP;
+	}
+
+	@Override
+	public ItemStack getPickedResult(RayTraceResult target) {
+		return new ItemStack(ItemList.haddock_spawn_egg.get());
 	}
 
 	protected void registerAttributes() {

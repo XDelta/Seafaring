@@ -8,13 +8,14 @@ import net.minecraft.item.Items;
 import net.minecraft.util.DamageSource;
 import net.minecraft.util.SoundEvent;
 import net.minecraft.util.SoundEvents;
+import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.world.World;
-import tk.deltawolf.sea.lists.EntityList;
+import tk.deltawolf.sea.lists.ItemList;
 
 @SuppressWarnings("ALL")
 public class SwampFeederEntity extends AbstractGroupFishEntity {
 	public SwampFeederEntity(EntityType<? extends SwampFeederEntity> entityType, World world) {
-		super((EntityType<? extends SwampFeederEntity>) EntityList.SWAMPFEEDER, world);
+		super(entityType, world);
 	}
 
 	protected void registerGoals() {
@@ -34,6 +35,11 @@ public class SwampFeederEntity extends AbstractGroupFishEntity {
 	}
 	protected SoundEvent getFlopSound() {
 		return SoundEvents.ENTITY_COD_FLOP;
+	}
+
+	@Override
+	public ItemStack getPickedResult(RayTraceResult target) {
+		return new ItemStack(ItemList.swamp_feeder_spawn_egg.get());
 	}
 
 	protected void registerAttributes() {
