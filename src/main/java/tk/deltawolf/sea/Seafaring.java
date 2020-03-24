@@ -3,11 +3,14 @@ package tk.deltawolf.sea;
 import net.minecraft.server.dedicated.ServerProperties;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLDedicatedServerSetupEvent;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import tk.deltawolf.sea.config.Config;
+import tk.deltawolf.sea.config.ConfigHelper;
 import tk.deltawolf.sea.handler.GameEventHandler;
 import tk.deltawolf.sea.lists.ContainerList;
 import tk.deltawolf.sea.lists.RendererList;
@@ -25,6 +28,20 @@ public class Seafaring {
 		FMLJavaModLoadingContext.get().getModEventBus().addListener(this::postInit);
 		MinecraftForge.EVENT_BUS.register(this);
 		GameEventHandler.init();
+
+		//Configs
+		FMLJavaModLoadingContext.get().getModEventBus().addListener((ModConfig.ModConfigEvent event) -> {
+			final ModConfig config = event.getConfig();
+			if(config.getSpec() == Config.CLIENTSPEC) {
+				ConfigHelper.updateClientConfig(config);
+			}
+			if(config.getSpec() == Config.COMMONSPEC) {
+				ConfigHelper.updateCommonConfig(config);
+			}
+		});
+
+		ModLoadingContext.get().registerConfig(ModConfig.Type.CLIENT, Config.CLIENTSPEC);
+		ModLoadingContext.get().registerConfig(ModConfig.Type.COMMON, Config.COMMONSPEC);
 	}
 
 	private void commonSetup(final FMLCommonSetupEvent event) {

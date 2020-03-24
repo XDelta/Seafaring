@@ -9,12 +9,15 @@ public abstract class Features {
 	public static final Feature<NoFeatureConfig> SALT_PILE = new SaltFeature(NoFeatureConfig::deserialize);
 	public static final Feature<NoFeatureConfig> SEA_STONE = new SeaStoneFeature(NoFeatureConfig::deserialize);
 	public static final Feature<NoFeatureConfig> RED_SEA_GRASS = new RedSeaGrassFeature(NoFeatureConfig::deserialize);
+	public static final Feature<NoFeatureConfig> ZABLU_VINE = new ZabluVineFeature(NoFeatureConfig::deserialize);
 
 	@SubscribeEvent
 	public static void registerFeatures(RegistryEvent.Register<Feature<?>> event) {
+		//Reminder to add registered to {@link Seafaring#WorldGen}
 		event.getRegistry().registerAll(
 			SALT_PILE,
-			SEA_STONE
+			SEA_STONE,
+			ZABLU_VINE
 			//RED_SEA_GRASS
 		);
 	}

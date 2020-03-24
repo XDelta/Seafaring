@@ -19,7 +19,9 @@ import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.TopSolidWithNoiseConfig;
 import net.minecraftforge.registries.ForgeRegistries;
+import tk.deltawolf.sea.config.Config;
 import tk.deltawolf.sea.lists.BlockList;
+import tk.deltawolf.sea.util.Util;
 
 import java.util.Random;
 import java.util.function.Function;
@@ -42,7 +44,7 @@ public class SaltFeature extends Feature<NoFeatureConfig> {
 		int j = worldIn.getHeight(Heightmap.Type.OCEAN_FLOOR, pos.getX(), pos.getZ());
 		BlockPos blockpos = new BlockPos(pos.getX(), j, pos.getZ());
 		if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER) {
-			BlockState blockstate = BlockList.salt_pile.getDefaultState().with(WATERLOGGED, Boolean.valueOf(true));
+			BlockState blockstate = BlockList.salt_pile.get().getDefaultState().with(WATERLOGGED, Boolean.valueOf(true));
 			if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER && worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.WATER && this.isValidSpawnPosition(blockstate, worldIn, blockpos)) {
 				worldIn.setBlockState(blockpos, blockstate, 2);
 				return true;
@@ -55,8 +57,17 @@ public class SaltFeature extends Feature<NoFeatureConfig> {
 		ForgeRegistries.BIOMES.getValues().stream().forEach(SaltFeature::process);
 	}
 	private static void process(Biome biome) {
-		if (biome.getCategory() == Biome.Category.OCEAN){
-			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SALT_PILE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 130.0D, 0.75D, Heightmap.Type.OCEAN_FLOOR_WG)));
+		if (Config.enableSaltPileSpawning) {
+			if (biome.getCategory() == Biome.Category.OCEAN) {
+				biome.addFeature(GenerationStage.Decoration.RAW_GENERATION,
+					Biome.createDecoratedFeature(
+						Features.SALT_PILE,
+						IFeatureConfig.NO_FEATURE_CONFIG,
+						Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED,
+						new TopSolidWithNoiseConfig(1, 130.0D, 0.75D, Heightmap.Type.OCEAN_FLOOR_WG)
+					)
+				);
+			}
 		}
 	}
 }

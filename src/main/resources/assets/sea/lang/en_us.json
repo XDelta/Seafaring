@@ -3,12 +3,14 @@
 	"itemGroup.tabSeaWIP": "Seafaring WIP Items",
 
 	"_c": "blocks",
-	"block.sea.salt_pile": "Salt Pile [Placer]",
+	"block.sea.salt_pile": "Salt Pile",
 	"block.sea.compressed_sponge": "Compressed Sponge",
 	"block.sea.wet_compressed_sponge": "Wet Compressed Sponge",
-	"block.sea.sea_stone": "Sea Stone [Placer]",
-	"block.sea.red_sea_grass": "[WIP]Red Sea Grass [Placer]",
+	"block.sea.sea_stone": "Sea Stone",
+	"block.sea.red_sea_grass": "[WIP]Red Sea Grass",
 	"block.sea.tackle_bench": "[WIP]Tackle Bench",
+	"block.sea.unidentified_plant": "[WIP]Unidentified Plant",
+	"block.sea.zablu_vine": "Zablu Vine",
 
 	"_c": "items",
 	"item.sea.salt": "Salt",
@@ -55,6 +57,9 @@
 	"entity.sea.haddock": "Haddock",
 	"entity.sea.swamp_feeder": "Swamp Feeder",
 
+	"_c": "effects",
+	"effect.sea.stunned": "Stunned",
+
 	"_c": "messages",
 	"sea.message": "The message crumbled apart in your hands",
 	"sea.message1": "The message crumbled apart in your hands",
@@ -85,10 +90,15 @@
 	"item.sea.tooltip.shift": "§7Hold §e§oShift§r§7 for Details",
 	"item.sea.tooltip.alt": "§7Hold §d§oAlt§r§7 for More Details",
 	"item.sea.tooltip.ctrl": "§7Hold §b§oCtrl§r§7 for Advanced Details",
+
 	"item.sea.test.tooltip": "Testing item tooltip",
-	"item.sea.test.shift": "§e§oLets Get Schwifty",
-	"item.sea.test.alt": "§d§oAlternatives Here",
-	"item.sea.test.ctrl": "§b§oNoControl",
+	"item.sea.test.shift.tooltip": "§e§oLets Get Schwifty",
+	"item.sea.test.alt.tooltip": "§d§oAlternatives Here",
+	"item.sea.test.ctrl.tooltip": "§b§oNoControl",
+	"block.sea.seastone.tooltip": "",
+	"block.sea.seastone.shift": "Use the debug stick to change variants",
+	"block.sea.red_sea_grass.tooltip": "§9Za blu zaps you",
+	"block.sea.zablu_vine.tooltip": "§9Za blu zaps you",
 
 	"item.sea.weighted_boots.tooltip": "Float like a rock",
 	"item.sea.message_in_a_bottle.tooltip": "Well, it's a bottle with a message inside",

@@ -19,6 +19,7 @@ import net.minecraft.world.gen.feature.NoFeatureConfig;
 import net.minecraft.world.gen.placement.Placement;
 import net.minecraft.world.gen.placement.TopSolidWithNoiseConfig;
 import net.minecraftforge.registries.ForgeRegistries;
+import tk.deltawolf.sea.config.Config;
 import tk.deltawolf.sea.lists.BlockList;
 
 import java.util.Random;
@@ -43,7 +44,7 @@ public class SeaStoneFeature extends Feature<NoFeatureConfig> {
 		int j = worldIn.getHeight(Heightmap.Type.OCEAN_FLOOR, pos.getX(), pos.getZ());
 		BlockPos blockpos = new BlockPos(pos.getX(), j, pos.getZ());
 		if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER) {
-			BlockState blockstate = BlockList.sea_stone.getDefaultState().with(WATERLOGGED, Boolean.valueOf(true)).with(SIZE, Integer.valueOf(rand.nextInt(2)+1));
+			BlockState blockstate = BlockList.sea_stone.get().getDefaultState().with(WATERLOGGED, Boolean.valueOf(true)).with(SIZE, Integer.valueOf(rand.nextInt(2)+1));
 			if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER && worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.WATER && this.isValidSpawnPosition(blockstate, worldIn, blockpos)) {
 				worldIn.setBlockState(blockpos, blockstate, 2);
 				return true;
@@ -56,8 +57,17 @@ public class SeaStoneFeature extends Feature<NoFeatureConfig> {
 		ForgeRegistries.BIOMES.getValues().stream().forEach(SeaStoneFeature::process);
 	}
 	private static void process(Biome biome) {
-		if (biome.getCategory() == Biome.Category.OCEAN){
-			biome.addFeature(GenerationStage.Decoration.RAW_GENERATION, Biome.createDecoratedFeature(Features.SEA_STONE, IFeatureConfig.NO_FEATURE_CONFIG, Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED, new TopSolidWithNoiseConfig(1, 140.0D, 1.1D, Heightmap.Type.OCEAN_FLOOR_WG)));
+		if (Config.enableSeaStoneSpawning) {
+			if (biome.getCategory() == Biome.Category.OCEAN || biome.getCategory() == Biome.Category.RIVER) {
+				biome.addFeature(GenerationStage.Decoration.RAW_GENERATION,
+					Biome.createDecoratedFeature(
+						Features.SEA_STONE,
+						IFeatureConfig.NO_FEATURE_CONFIG,
+						Placement.TOP_SOLID_HEIGHTMAP_NOISE_BIASED,
+						new TopSolidWithNoiseConfig(1, 140.0D, 1.1D, Heightmap.Type.OCEAN_FLOOR_WG)
+					)
+				);
+			}
 		}
 	}
 }
