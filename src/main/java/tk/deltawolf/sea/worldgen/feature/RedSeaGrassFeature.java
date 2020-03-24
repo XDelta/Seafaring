@@ -39,7 +39,7 @@ public class RedSeaGrassFeature extends Feature<NoFeatureConfig> {
 		int j = worldIn.getHeight(Heightmap.Type.OCEAN_FLOOR, pos.getX(), pos.getZ());
 		BlockPos blockpos = new BlockPos(pos.getX(), j, pos.getZ());
 		if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER) {
-			BlockState blockstate = BlockList.red_sea_grass.getDefaultState();
+			BlockState blockstate = BlockList.red_sea_grass.get().getDefaultState();
 			if (worldIn.getBlockState(blockpos).getBlock() == Blocks.WATER && worldIn.getBlockState(blockpos.up()).getBlock() == Blocks.WATER && this.isValidSpawnPosition(blockstate, worldIn, blockpos)) {
 				worldIn.setBlockState(blockpos, blockstate,2);
 				return true;

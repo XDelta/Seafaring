@@ -60,7 +60,7 @@ public class OxygenTank extends ArmorItem {
 				if (player.isInWater() && !(Util.isInBubbleColumn(world, player))) {
 					if (above == Blocks.AIR || above == Blocks.CAVE_AIR) {
 						this.repairTank(chest, player, false);
-					} else if (Util.isEquipped(player, ItemList.scuba_mask) && isTank(chest.getItem())) {
+					} else if (Util.isEquipped(player, ItemList.scuba_mask.get()) && isTank(chest.getItem())) {
 						this.damageTank(chest, player);
 					}
 				} else {

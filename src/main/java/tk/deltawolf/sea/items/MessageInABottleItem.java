@@ -49,14 +49,14 @@ public class MessageInABottleItem extends Item {
 					player.inventory.addItemStackToInventory(new ItemStack(Items.TROPICAL_FISH));
 					break;
 				case 2:
-					player.inventory.addItemStackToInventory(new ItemStack(ItemList.haddock));
+					player.inventory.addItemStackToInventory(new ItemStack(ItemList.haddock.get()));
 					break;
 				default://0
 					player.inventory.addItemStackToInventory(new ItemStack(Items.COD));
 			}
 		} else if (messageRoll == 5) {//give player sea_moss
 			message = "sea.message" + messageRoll;
-			player.inventory.addItemStackToInventory(new ItemStack(ItemList.sea_moss));
+			player.inventory.addItemStackToInventory(new ItemStack(ItemList.sea_moss.get()));
 		} else {
 			message = "sea.message" + messageRoll;
 		}

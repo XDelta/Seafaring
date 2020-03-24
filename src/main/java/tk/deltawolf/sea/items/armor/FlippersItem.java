@@ -41,12 +41,12 @@ public class FlippersItem extends ArmorItem {
 	}
 	private void setSwimming(PlayerEntity player, boolean isSwimming){
 		ItemStack boots = player.getItemStackFromSlot(EquipmentSlotType.FEET);
-		if(Util.isEquipped(player, ItemList.flippers) && isSwimming) {
+		if(Util.isEquipped(player, ItemList.flippers.get()) && isSwimming) {
 			if(EnchantmentHelper.getEnchantments(boots).get(Enchantments.DEPTH_STRIDER) == null)
 			{
 				boots.addEnchantment(Enchantments.DEPTH_STRIDER, 1);
 			}
-		} else if(Util.isEquipped(player, ItemList.flippers) && !isSwimming) {
+		} else if(Util.isEquipped(player, ItemList.flippers.get()) && !isSwimming) {
 			removeEnchantments(boots);
 			player.addPotionEffect(new EffectInstance(Effects.SLOWNESS, 2, 0, false, false));
 		}

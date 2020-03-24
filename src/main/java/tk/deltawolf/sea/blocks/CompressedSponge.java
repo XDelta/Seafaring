@@ -33,7 +33,7 @@ public class CompressedSponge extends Block {
 
 	protected void tryAbsorb(World worldIn, BlockPos pos) {
 		if (this.absorb(worldIn, pos)) {
-			worldIn.setBlockState(pos, BlockList.wet_compressed_sponge.getDefaultState(), 2);
+			worldIn.setBlockState(pos, BlockList.wet_compressed_sponge.get().getDefaultState(), 2);
 			worldIn.playEvent(2001, pos, Block.getStateId(Blocks.WATER.getDefaultState()));
 		}
 	}

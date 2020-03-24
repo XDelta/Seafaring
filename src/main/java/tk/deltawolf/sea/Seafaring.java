@@ -12,8 +12,7 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import tk.deltawolf.sea.config.Config;
 import tk.deltawolf.sea.config.ConfigHelper;
 import tk.deltawolf.sea.handler.GameEventHandler;
-import tk.deltawolf.sea.lists.ContainerList;
-import tk.deltawolf.sea.lists.RendererList;
+import tk.deltawolf.sea.lists.*;
 import tk.deltawolf.sea.util.Util;
 import tk.deltawolf.sea.worldgen.WorldGen;
 
