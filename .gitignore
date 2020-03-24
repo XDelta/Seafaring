@@ -17,10 +17,16 @@ out
 build
 .gradle
 
+# windows
+.lnk
+.url
+.zip
+
 # other
 eclipse
 run
 .psd
+.rar
 
 # Files from Forge MDK
 forge*changelog.txt
